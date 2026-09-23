@@ -5,6 +5,8 @@ app_description = "Library Management System"
 app_email = "makarasam68@gmail.com"
 app_license = "mit"
 
+app_logo_url = "/assets/library_management/icons/library.png"
+
 # Send non-GET requests for this app's endpoints as native `application/json`
 # bodies instead of form-encoded, per-key JSON-stringified values.
 use_json_request_body = True
@@ -15,15 +17,14 @@ use_json_request_body = True
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "library_management",
-# 		"logo": "/assets/library_management/logo.png",
-# 		"title": "Library Management",
-# 		"route": "/library_management",
-# 		"has_permission": "library_management.api.permission.has_app_permission",
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "library_management",
+		"logo": "/assets/library_management/icons/library.png",
+		"title": "Library Management",
+		"route": "/app/book",
+	}
+]
 
 # The dock, the rail down the left of the desk, is a document rather than a hook. Author it in
 # Manage Dock on a developer-mode site and press Export to App, and it is written to
