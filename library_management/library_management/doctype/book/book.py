@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 # import frappe
+import frappe
 from frappe.model.document import Document
 
 
@@ -20,3 +21,24 @@ class Book(Document):
 	# end: auto-generated types
 
 	_DOCTYPE_NAME = "Book"
+
+	# -----custom code here--- #
+	
+	# Custom validation field 
+	def validate(self):
+		if not self.article:
+			frappe.throw("Article is require")
+	# makes fuction update
+	def on_update(self):
+		frappe.publish_realtime(
+			event="book_udpated",
+			message={"name":self.name, "article" :self.article},
+			after_commit=True,
+		)
+	# makes function delete 
+	def on_delete(self):
+		frappe.publish_realtime(
+			event="book_deteted",
+			message={"name":self.name},
+			after_commit=True
+		)
