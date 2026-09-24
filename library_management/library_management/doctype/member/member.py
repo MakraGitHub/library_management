@@ -17,8 +17,8 @@ class Member(Document):
 		address: DF.Data | None
 		attach_image_vkvt: DF.AttachImage | None
 		date: DF.Date
-		email: DF.Data | None
-		name1: DF.Data | None
+		email: DF.Data
+		name1: DF.Data
 		phone: DF.Data
 	# end: auto-generated types
 

@@ -3,6 +3,6 @@
 
 frappe.ui.form.on("Member", {
 	refresh(frm) {
-        alert('are you want to makes it?');
+		console.log("Yes");s
 	},
 });

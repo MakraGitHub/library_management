@@ -19,13 +19,15 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name",
+   "reqd": 1,
    "unique": 1
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Email"
+   "label": "Email",
+   "reqd": 1
   },
   {
    "fieldname": "phone",
@@ -54,7 +56,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-23 16:20:57.241524",
+ "modified": "2026-09-24 17:17:24.407970",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Member",
