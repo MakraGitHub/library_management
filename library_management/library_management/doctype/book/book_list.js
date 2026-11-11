@@ -4,3 +4,5 @@ frappe.listview_settings["Book"] = {
 		frappe.realtime.on("book_updated", () => listview.refresh());
 	},
 };
+
+# Please help customize and any update.
